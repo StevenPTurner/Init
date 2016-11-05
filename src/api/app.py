@@ -19,7 +19,7 @@ def hello(name):
 
 @app.route('/generate_bun')
 def generate_bun():
-    return random_bun.main(10)
+    return random_bun.random_number(10)
 
 if __name__== '__main__':
     app.run(debug = True, host = '0.0.0.0')
