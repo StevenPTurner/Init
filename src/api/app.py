@@ -1,14 +1,16 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+templates_path = "../templates"
+
+app = Flask(__name__, template_folder = templtes_path)
 
 @app.route('/')
 def index():
-    return render_remplate(../'index.html')
+    return render_template('index.html')
 
-@app.route('/cakes')
+@app.route('/Kate')
 def cakes():
-    return 'Cake!'
+    return render_template('kate.html')
 
 if __name__== '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug = True, host = '0.0.0.0')
