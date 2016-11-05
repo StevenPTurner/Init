@@ -18,8 +18,8 @@ def hello(name):
     return render_template('hello.html', name=name)
 
 @app.route('/generate_bun')
-def generate_bun(10):
-    return random_bun.main(number_of_buns)
+def generate_bun():
+    return random_bun.main(10)
 
 if __name__== '__main__':
     app.run(debug = True, host = '0.0.0.0')
