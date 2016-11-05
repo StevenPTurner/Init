@@ -19,7 +19,8 @@ def hello(name):
 
 @app.route('/generate_bun')
 def generate_bun():
-    return random_bun.random_number(10)
+    number = random_bun.random_number(10)
+    return render_template('generate_bun.html' number=number)
 
 if __name__== '__main__':
     app.run(debug = True, host = '0.0.0.0')
