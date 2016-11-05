@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import random_bun
 
 templates_path = "../templates"
 
@@ -15,6 +16,10 @@ def cakes():
 @app.route('/hello/<name>')
 def hello(name):
     return render_template('hello.html', name=name)
-    
+
+@app.route('/generate_bun')
+def generate_bun(10):
+    return random_bun.main(number_of_buns)
+
 if __name__== '__main__':
     app.run(debug = True, host = '0.0.0.0')
