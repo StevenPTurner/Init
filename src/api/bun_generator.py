@@ -7,6 +7,6 @@ def build_image_string(bun_number):
     return str('../static/buns/bun') + str(bun_number) + str('.png')
 
 def get_random_bun():
-    number = random_number(20)
+    number = random_number(42)
     image_string = build_image_string(number)
     return image_string

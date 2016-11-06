@@ -10,7 +10,7 @@ app = Flask(__name__, template_folder = templates_path, static_folder = static_p
 def index():
     return render_template('index.html')
 
-@app.route('/Kate')
+@app.route('/kate')
 def cakes():
     return render_template('kate.html')
 
@@ -23,5 +23,9 @@ def generate_bun():
     image_url = bun_generator.get_random_bun()
     return render_template('generate_bun.html', image_url=image_url)
 
+@app.route('/puppy_of_the_week')
+def puppy_of_the_week():
+    return render_template('potw.html')
+    
 if __name__== '__main__':
     app.run(debug = True, host = '0.0.0.0')
