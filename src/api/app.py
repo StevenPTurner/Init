@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import random_bun
+import bun_generator
 
 templates_path = "../templates"
 
