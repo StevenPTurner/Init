@@ -20,7 +20,7 @@ def hello(name):
 @app.route('/generate_bun')
 def generate_bun():
     image_url = bun_generator.get_random_bun()
-    return render_template('generate_bun.html' image_url=image_url)
+    return render_template('generate_bun.html', image_url=image_url)
 
 if __name__== '__main__':
     app.run(debug = True, host = '0.0.0.0')
