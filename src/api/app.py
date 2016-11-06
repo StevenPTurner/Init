@@ -2,8 +2,9 @@ from flask import Flask, render_template
 import bun_generator
 
 templates_path = "../templates"
+static_path = "../static"
 
-app = Flask(__name__, template_folder = templates_path)
+app = Flask(__name__, template_folder = templates_path, static_folder = static_path)
 
 @app.route('/')
 def index():
